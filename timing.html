@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guruvayoor Temple Timings | Darshan & Pooja Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffffff;
+            --secondary: #1a1a1a;
+            --text: #333333;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --border-radius: 8px;
+            --spacing: 1.5rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+        
+        .timings-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing);
+        }
+        
+        @media (min-width: 768px) {
+            .timings-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .timings-card {
+            background-color: var(--primary);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius);
+            padding: var(--spacing);
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .timing-session {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .timing-session:last-child {
+            border-bottom: none;
+        }
+        
+        .session-name {
+            font-weight: 400;
+        }
+        
+        .session-time {
+            font-weight: 500;
+            color: var(--secondary);
+        }
+        
+        .pooja-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .pooja-item:last-child {
+            border-bottom: none;
+        }
+        
+        .pooja-name {
+            font-weight: 400;
+        }
+        
+        .pooja-time {
+            font-weight: 500;
+            color: var(--secondary);
+        }
+        
+        .note {
+            background-color: var(--light-gray);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: var(--spacing);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .note-title {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text);
+            font-size: 0.9rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+    </style>
+</head>
+<body>
+    <h1>Guruvayoor Temple Timings</h1>
+    <p class="subtitle">Darshan and Pooja Schedule</p>
+    
+    <div class="timings-container">
+        <!-- Darshan Timings Card -->
+        <div class="timings-card">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i>
+                Darshan Timings
+            </h2>
+            
+            <div class="timing-session">
+                <span class="session-name">Morning</span>
+                <span class="session-time">03:00 AM – 12:30 PM</span>
+            </div>
+            <div class="timing-session">
+                <span class="session-name">Evening</span>
+                <span class="session-time">04:30 PM – 09:15 PM</span>
+            </div>
+            
+            <div class="note">
+                <div class="note-title">
+                    <i class="fas fa-info-circle"></i>
+                    Note
+                </div>
+                <p>The temple remains closed between 12:30 PM and 4:30 PM daily for cleaning and rituals.</p>
+            </div>
+        </div>
+        
+        <!-- Pooja Schedule Card -->
+        <div class="timings-card">
+            <h2 class="section-title">
+                <i class="fas fa-praying-hands"></i>
+                Pooja Schedule
+            </h2>
+            
+            <div class="pooja-item">
+                <span class="pooja-name">Nirmalyam</span>
+                <span class="pooja-time">03:00 AM</span>
+            </div>
+            <div class="pooja-item">
+                <span class="pooja-name">Usha Pooja</span>
+                <span class="pooja-time">07:00 AM</span>
+            </div>
+            <div class="pooja-item">
+                <span class="pooja-name">Ethirettu Pooja</span>
+                <span class="pooja-time">07:40 AM</span>
+            </div>
+            <div class="pooja-item">
+                <span class="pooja-name">Pantheeradi Pooja</span>
+                <span class="pooja-time">08:00 AM</span>
+            </div>
+            <div class="pooja-item">
+                <span class="pooja-name">Ucha Pooja</span>
+                <span class="pooja-time">11:30 AM</span>
+            </div>
+            <div class="pooja-item">
+                <span class="pooja-name">Deeparadhana</span>
+                <span class="pooja-time">06:30 PM</span>
+            </div>
+            <div class="pooja-item">
+                <span class="pooja-name">Athazha Pooja</span>
+                <span class="pooja-time">08:45 PM</span>
+            </div>
+            
+            <div class="note">
+                <div class="note-title">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Important
+                </div>
+                <p>Timings may vary during festivals and special occasions. Arrive early to avoid rush.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Guruvayoor Devaswom • Updated January 2024</p>
+    </footer>
+</body>
+</html>

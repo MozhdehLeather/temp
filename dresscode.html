@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guruvayoor Temple Dress Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffffff;
+            --secondary: #1a1a1a;
+            --text: #333333;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --border-radius: 8px;
+            --spacing: 1.5rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            text-align: center;
+        }
+        
+        .description {
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .guidelines-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing);
+        }
+        
+        .guideline-card {
+            background-color: var(--primary);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius);
+            padding: var(--spacing);
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .rule-list {
+            list-style-type: none;
+        }
+        
+        .rule-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--medium-gray);
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        .rule-item:last-child {
+            border-bottom: none;
+        }
+        
+        .rule-icon {
+            color: var(--secondary);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+        
+        .note {
+            background-color: var(--light-gray);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: var(--spacing);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .note-title {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text);
+            font-size: 0.9rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+    </style>
+</head>
+<body>
+    <h1>Dress Code for Guruvayoor Temple</h1>
+    <p class="description">The Guruvayoor Temple follows a strict traditional dress code to maintain the sanctity of the shrine. Visitors are expected to adhere to these guidelines before entering the temple premises.</p>
+    
+    <div class="guidelines-container">
+        <!-- Men's Dress Code -->
+        <div class="guideline-card">
+            <h2 class="section-title">
+                <i class="fas fa-male"></i>
+                For Men
+            </h2>
+            
+            <ul class="rule-list">
+                <li class="rule-item">
+                    <i class="fas fa-check-circle rule-icon"></i>
+                    <span>Must wear a mundu/dhoti tied around the waist without a shirt</span>
+                </li>
+                <li class="rule-item">
+                    <i class="fas fa-times-circle rule-icon"></i>
+                    <span>Vests, lungis, jeans, and trousers are not permitted inside the temple</span>
+                </li>
+                <li class="rule-item">
+                    <i class="fas fa-info-circle rule-icon"></i>
+                    <span>Upper body must remain bare; a traditional angavastram can be draped over the shoulder</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Women's Dress Code -->
+        <div class="guideline-card">
+            <h2 class="section-title">
+                <i class="fas fa-female"></i>
+                For Women
+            </h2>
+            
+            <ul class="rule-list">
+                <li class="rule-item">
+                    <i class="fas fa-check-circle rule-icon"></i>
+                    <span>Saree, set-mundu, salwar kameez, or long skirt with blouse is allowed</span>
+                </li>
+                <li class="rule-item">
+                    <i class="fas fa-times-circle rule-icon"></i>
+                    <span>Short skirts, jeans, leggings, and western wear are not permitted</span>
+                </li>
+                <li class="rule-item">
+                    <i class="fas fa-info-circle rule-icon"></i>
+                    <span>Modest dressing is expected, covering shoulders and knees</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Children's Dress Code -->
+        <div class="guideline-card">
+            <h2 class="section-title">
+                <i class="fas fa-child"></i>
+                For Children
+            </h2>
+            
+            <ul class="rule-list">
+                <li class="rule-item">
+                    <i class="fas fa-check-circle rule-icon"></i>
+                    <span>Boys may wear shorts, dhotis, or mundus</span>
+                </li>
+                <li class="rule-item">
+                    <i class="fas fa-check-circle rule-icon"></i>
+                    <span>Girls may wear pavada, long skirt, or salwar kameez</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="note">
+        <div class="note-title">
+            <i class="fas fa-exclamation-triangle"></i>
+            Important Note
+        </div>
+        <p>Photography, mobile phones, and modern attire are strictly prohibited inside the temple.</p>
+    </div>
+    
+    <footer>
+        <p>Guruvayoor Devaswom • Dress Code Guidelines</p>
+    </footer>
+</body>
+</html>

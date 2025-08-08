@@ -1,0 +1,89 @@
+{
+  "threads": [
+    {
+      "id": "1",
+      "content": "The temple atmosphere is divine in the mornings",
+      "author": "Devotee",
+      "likes": 14,
+      "dislikes": 2,
+      "voters": [
+        "user123",
+        "user456",
+        "h3t1axoe3jo1754606050347",
+        "qwc8w2y2x3p1754606161404"
+      ],
+      "createdAt": "2023-07-15T08:30:00Z"
+    },
+    {
+      "id": "2",
+      "content": "Has anyone attended the evening aarti? How was it?",
+      "author": "Visitor",
+      "likes": 10,
+      "dislikes": 1,
+      "voters": [
+        "user789",
+        "h3t1axoe3jo1754606050347",
+        "qwc8w2y2x3p1754606161404"
+      ],
+      "createdAt": "2023-07-14T18:45:00Z"
+    },
+    {
+      "id": 1754606119993,
+      "content": "we are thinking about the options of ai",
+      "author": "robin",
+      "likes": 0,
+      "dislikes": 0,
+      "voters": [],
+      "createdAt": "2025-08-07T22:35:19.993Z"
+    },
+    {
+      "id": 1754606177297,
+      "content": "hey its me robin",
+      "author": "fgdfgfg",
+      "likes": 0,
+      "dislikes": 0,
+      "voters": [],
+      "createdAt": "2025-08-07T22:36:17.297Z"
+    },
+    {
+      "content": "sgdg",
+      "author": "",
+      "likes": 0,
+      "dislikes": 0,
+      "voters": [],
+      "id": 1754607224415,
+      "createdAt": "2025-08-07T22:53:44.415Z"
+    },
+    {
+      "content": "ertrt",
+      "author": "",
+      "likes": 0,
+      "dislikes": 0,
+      "voters": [],
+      "id": 1754607226087,
+      "createdAt": "2025-08-07T22:53:46.087Z"
+    },
+    {
+      "content": "rtr",
+      "author": "",
+      "likes": 1,
+      "dislikes": 0,
+      "voters": [
+        "mfrlis4gz1g1754607120440"
+      ],
+      "id": 1754607227398,
+      "createdAt": "2025-08-07T22:53:47.398Z"
+    },
+    {
+      "content": "rtt",
+      "author": "",
+      "likes": 1,
+      "dislikes": 0,
+      "voters": [
+        "mfrlis4gz1g1754607120440"
+      ],
+      "id": 1754607228790,
+      "createdAt": "2025-08-07T22:53:48.790Z"
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Guruvayoor Temple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffffff;
+            --secondary: #1a1a1a;
+            --accent: #4a4a4a;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #757575;
+            --text: #333333;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-gray);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            border: 1px solid var(--medium-gray);
+            transition: all 0.2s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--medium-gray);
+            border-radius: 3px;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+        }
+        
+        .contact-description {
+            margin-bottom: 1.75rem;
+            color: var(--dark-gray);
+            line-height: 1.7;
+        }
+        
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+        }
+        
+        .contact-icon {
+            width: 24px;
+            color: var(--dark-gray);
+            margin-right: 12px;
+            font-size: 1rem;
+            margin-top: 3px;
+            opacity: 0.8;
+        }
+        
+        .contact-label {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+        
+        .contact-value {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .contact-value a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .contact-value a:hover {
+            color: var(--secondary);
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 1rem;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            transition: all 0.2s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--medium-gray);
+            color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .donation-details {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+        
+        .donation-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .donation-title i {
+            margin-right: 10px;
+        }
+        
+        .donation-item {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            display: flex;
+        }
+        
+        .donation-item strong {
+            min-width: 100px;
+            display: inline-block;
+            color: var(--secondary);
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: var(--secondary);
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .footer-text {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-link {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .footer-link:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-link::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        .copyright {
+            font-size: 0.8rem;
+            color: var(--dark-gray);
+            opacity: 0.8;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contact Guruvayoor Temple</h1>
+            <p class="subtitle">Reach out for darshan queries, pooja bookings, or general inquiries about the sacred abode of Lord Krishna</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="contact-section">
+            <div class="contact-card">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Contact Information</h2>
+                <p class="contact-description">Our team is available to assist you with temple-related queries, pooja bookings, and general information. Please find our contact details below.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <div class="contact-label">Address</div>
+                            <div class="contact-value">
+                                Guruvayoor Devaswom Office<br>
+                                East Nada, Guruvayur<br>
+                                Thrissur, Kerala - 680101<br>
+                                India
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">
+                                <a href="tel:+914872556335">+91 487 255 6335</a> (Office)<br>
+                                <a href="tel:+914872556345">+91 487 255 6345</a> (Information)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">
+                                <a href="mailto:info@guruvayurdevaswom.in">info@guruvayurdevaswom.in</a> (General)<br>
+                                <a href="mailto:support@guruvayurtemple.org">support@guruvayurtemple.org</a> (Support)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <div class="contact-label">Office Hours</div>
+                            <div class="contact-value">
+                                Monday to Saturday: 09:30 AM - 05:00 PM IST<br>
+                                Closed on Sundays and public holidays
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe contact-icon"></i>
+                        <div>
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value">
+                                <a href="https://guruvayurdevaswom.nic.in" target="_blank">guruvayurdevaswom.nic.in</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://facebook.com/guruvayurtemple" class="social-link" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/guruvayurtemple" class="social-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/guruvayurtemple" class="social-link" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Temple Location</h2>
+                <p class="contact-description">Find directions to the sacred Guruvayoor Temple, the abode of Lord Krishna.</p>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.3299899999997!2d76.0419!3d10.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee15ed42d1bb%3A0x1e6c6b5b5b5b5b5b!2sGuruvayur%20Temple!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="contact-item" style="margin-top: 1.5rem;">
+                    <i class="fas fa-directions contact-icon"></i>
+                    <div>
+                        <div class="contact-label">Get Directions</div>
+                        <div class="contact-value">
+                            <a href="https://www.google.com/maps/place/Guruvayur+Temple/@10.5941,76.0419,17z" target="_blank">Open in Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-details">
+                    <div class="donation-title"><i class="fas fa-donate"></i> Donation Details</div>
+                    <div class="donation-item"><strong>Bank Name:</strong> State Bank of India</div>
+                    <div class="donation-item"><strong>Branch:</strong> Guruvayoor</div>
+                    <div class="donation-item"><strong>Account Name:</strong> Guruvayur Devaswom</div>
+                    <div class="donation-item"><strong>Account Number:</strong> 123456789012</div>
+                    <div class="donation-item"><strong>IFSC Code:</strong> SBIN0000847</div>
+                    <div class="donation-item"><strong>UPI ID:</strong> guruvayur@sbi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Sri Guruvayurappan Temple - The divine abode of Lord Krishna</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">About Temple</a>
+                <a href="#" class="footer-link">Pooja Booking</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+            <p class="copyright">© 2023 Guruvayoor Devaswom. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Guruvayoor Temple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #f9f6ee;
+            --paper: #fffdf8;
+            --brown: #5c4d3d;
+            --gold: #c9a769;
+            --dark-brown: #3a2e24;
+            --light-gold: rgba(201, 167, 105, 0.15);
+            --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            --text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--cream);
+            color: var(--brown);
+            font-family: 'Crimson Pro', serif;
+            line-height: 1.8;
+            background-image: url('https://www.transparenttextures.com/patterns/rice-paper-3.png');
+            padding: 20px 0;
+        }
+        
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        .storybook {
+            background-color: var(--paper);
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+            padding: 4rem 3.5rem;
+            position: relative;
+            border: 1px solid rgba(92, 77, 61, 0.15);
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .storybook:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .storybook::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 40px;
+            right: 40px;
+            height: 12px;
+            background: linear-gradient(to right, var(--gold), #e5c78e);
+            border-radius: 0 0 6px 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .storybook::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+            right: 40px;
+            height: 12px;
+            background: linear-gradient(to right, var(--gold), #e5c78e);
+            border-radius: 6px 6px 0 0;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 1.2rem;
+            text-shadow: var(--text-shadow);
+            letter-spacing: -0.5px;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            width: 40%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+        
+        .subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.25rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 1.2px;
+            line-height: 1.6;
+        }
+        
+        .chapter {
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+        
+        .chapter-title {
+            font-size: 1.8rem;
+            color: var(--dark-brown);
+            margin-bottom: 1.8rem;
+            font-weight: 600;
+            display: inline-block;
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 0.6rem;
+            text-shadow: var(--text-shadow);
+        }
+        
+        .chapter-content {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            text-align: justify;
+            hyphens: auto;
+            color: var(--dark-brown);
+        }
+        
+        .chapter-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .illuminated {
+            background-color: var(--light-gold);
+            border-left: 4px solid var(--gold);
+            padding: 2rem 2rem 2rem 3rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+            position: relative;
+            border-radius: 0 6px 6px 0;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--dark-brown);
+            box-shadow: inset 4px 0 6px -4px rgba(0,0,0,0.1);
+        }
+        
+        .illuminated::before {
+            content: "❝";
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 3.5rem;
+            color: rgba(201, 167, 105, 0.4);
+            line-height: 1;
+            font-family: serif;
+        }
+        
+        .highlight-box {
+            background-color: rgba(92, 77, 61, 0.03);
+            border-radius: 6px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            border: 1px dashed rgba(92, 77, 61, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--gold), #e5c78e);
+        }
+        
+        .highlight-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .highlight-title::before, .highlight-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(92, 77, 61, 0.2), transparent);
+            margin: 0 1.5rem;
+        }
+        
+        .highlight-item {
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 2rem;
+            line-height: 1;
+            top: -0.3rem;
+        }
+        
+        .temple-image {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 2.5rem 0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            border: 1px solid rgba(92, 77, 61, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .temple-image:hover {
+            transform: scale(1.01);
+        }
+        
+        .footer-note {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            text-align: center;
+            color: var(--brown);
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(92, 77, 61, 0.15);
+            line-height: 1.7;
+        }
+        
+        /* Decorative elements */
+        .corner-decoration {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0.1;
+        }
+        
+        .top-left {
+            top: 20px;
+            left: 20px;
+            border-top: 2px solid var(--gold);
+            border-left: 2px solid var(--gold);
+        }
+        
+        .top-right {
+            top: 20px;
+            right: 20px;
+            border-top: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+        }
+        
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+            border-bottom: 2px solid var(--gold);
+            border-left: 2px solid var(--gold);
+        }
+        
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+            border-bottom: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+        }
+        
+        @media (max-width: 768px) {
+            .page-container {
+                padding: 0 15px;
+            }
+            
+            .storybook {
+                padding: 3rem 2rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .chapter-title {
+                font-size: 1.6rem;
+            }
+            
+            .chapter-content, .illuminated {
+                font-size: 1.05rem;
+            }
+            
+            .highlight-box {
+                padding: 2rem 1.5rem 2rem 2rem;
+            }
+            
+            .highlight-item {
+                padding-left: 1.8rem;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .storybook {
+                padding: 2.5rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .chapter-title {
+                font-size: 1.4rem;
+            }
+            
+            .illuminated {
+                padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            }
+            
+            .highlight-title::before, 
+            .highlight-title::after {
+                margin: 0 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="storybook">
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+            
+            <h1>About Guruvayoor Temple</h1>
+            <p class="subtitle">The Sacred Abode of Lord Krishna • Dwarka of the South</p>
+            
+            <div class="chapter">
+                <img src="images/about-guruvayoor-temple.jpg" alt="Guruvayoor Temple" class="temple-image">
+                
+                <div class="illuminated">
+                    Guruvayoor Temple is one of the most prominent and sacred Hindu temples in South India, often called the 'Dwarka of the South'. This holy site is a hub of devotion, tradition, and cultural richness that has endured for millennia.
+                </div>
+                
+                <div class="chapter-content">
+                    <p>Nestled in the town of Guruvayur, Kerala, this sacred temple is dedicated to Lord Krishna, revered here as 'Unnikrishnan' - the divine child form of Krishna. The temple holds an esteemed place in the hearts of millions of devotees who flock here seeking blessings and spiritual solace.</p>
+                    
+                    <p>The presiding deity is believed to be over 5,000 years old and was once worshipped by Lord Krishna Himself in Dwaraka. Legend has it that after the submergence of Dwaraka, the idol was brought to Kerala by Guru (the preceptor of the gods) and Vayu (the wind god), giving the temple its name - Guruvayoor (Guru+Vayu+Oor).</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Sacred Highlights</div>
+                    
+                    <div class="highlight-item">
+                        The main deity is made of a rare stone called Patala Anjanam and portrays Krishna in a standing posture with four arms (Chathurbahu), radiating divine grace.
+                    </div>
+                    
+                    <div class="highlight-item">
+                        Temple rituals are conducted in accordance with centuries-old Tantric and Vedic traditions, preserving ancient worship methods unchanged for generations.
+                    </div>
+                    
+                    <div class="highlight-item">
+                        Thousands of devotees perform sacred offerings like Thulabharam (weighing oneself against offerings), Archana, and special poojas daily.
+                    </div>
+                    
+                    <div class="highlight-item">
+                        Guruvayoor Ekadasi and Janmashtami are celebrated with grand spiritual and cultural events that attract devotees from across the world.
+                    </div>
+                    
+                    <div class="highlight-item">
+                        Elephants are an integral part of temple culture. Punnathur Kotta, the elephant sanctuary, houses the temple's majestic elephants in a unique tradition.
+                    </div>
+                    
+                    <div class="highlight-item">
+                        More than just a religious center, Guruvayoor represents Kerala's spiritual identity and cultural heritage, embodying timeless traditions.
+                    </div>
+                </div>
+                
+                <div class="chapter-content">
+                    <p>The temple's architecture follows the traditional Kerala style, with its golden flagstaff (Kodimaram) and exquisite murals depicting scenes from Krishna's life. The sanctum sanctorum, with its copper-plated roof and gold-plated flag post, radiates divine energy that has drawn devotees for centuries.</p>
+                    
+                    <p>What makes Guruvayoor unique is its strict adherence to traditions. The temple maintains ancient customs like the Nirmalya Darshan (early morning viewing of the deity adorned with previous day's flowers) and Seeveli (procession of elephants and percussion ensembles) that create a living connection to India's spiritual past.</p>
+                </div>
+            </div>
+            
+            <p class="footer-note">
+                Visitors are humbly requested to follow the traditional dress code (men: dhoti; women: sari/mundum neriyathum) and maintain the sanctity of the temple premises. Photography inside the sanctum is strictly prohibited.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

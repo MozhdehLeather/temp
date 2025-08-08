@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guruvayur blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        thread: {
+                            light: '#f5f5f5',
+                            DEFAULT: '#000000',
+                            dark: '#1a1a1a',
+                            blue: '#1d9bf0',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="main.js" defer></script>
+    <style>
+        .thread-item:hover { background-color: rgba(0, 0, 0, 0.03); }
+        .like-btn.liked { color: rgb(239, 68, 68); }
+        .dislike-btn.disliked { color: rgb(59, 130, 246); }
+    </style>
+</head>
+<body class="bg-thread-light min-h-screen">
+    <div class="max-w-xl mx-auto border-x border-gray-200 min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 bg-white/80 backdrop-blur-sm z-10 border-b border-gray-200 p-4">
+            <h1 class="text-xl font-bold text-thread-dark">guruvayur</h1>
+        </header>
+
+        <!-- Post Form -->
+        <div class="border-b border-gray-200 p-4 bg-white">
+            <form id="postForm" class="space-y-3">
+                <textarea id="content" required placeholder="Start a thread..." 
+                    class="w-full p-2 border-none focus:outline-none resize-none text-lg"
+                    rows="3"></textarea>
+                <div class="flex justify-between items-center">
+                    <input type="text" id="author" placeholder="Your name (optional)" 
+                           class="p-2 border rounded-full text-sm w-1/2">
+                    <button type="submit" 
+                            class="bg-thread-dark text-white px-4 py-2 rounded-full hover:bg-gray-800">
+                        Post
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Threads Feed -->
+        <div id="feed" class="divide-y divide-gray-200"></div>
+    </div>
+
+    <!-- Thread Template -->
+    <template id="threadTemplate">
+        <div class="thread-item p-4 hover:bg-gray-50 transition-colors duration-150">
+            <div class="flex space-x-3">
+                <div class="flex-shrink-0">
+                    <div class="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center">
+                        <span class="text-gray-600 text-sm user-initial"></span>
+                    </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold author-name"></p>
+                    <p class="text-gray-800 mt-1 content"></p>
+                    
+                    <div class="flex items-center mt-3 space-x-4 text-gray-500">
+                        <button class="like-btn flex items-center space-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                            </svg>
+                            <span class="like-count text-xs">0</span>
+                        </button>
+                        <button class="dislike-btn flex items-center space-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.017c.163 0 .326.02.485.06L17 4m0 0v9m0-9h2.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 13H17m0 0v2m-7-5h2M7 10H5a2 2 0 00-2 2v6a2 2 0 002 2h2.5" />
+                            </svg>
+                            <span class="dislike-count text-xs">0</span>
+                        </button>
+                        <span class="text-xs timestamp"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
